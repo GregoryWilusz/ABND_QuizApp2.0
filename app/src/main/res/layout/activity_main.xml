@@ -1,18 +1,339 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.quizapp.MainActivity">
+    tools:context="com.example.android.quizapp.MainActivity"
+    style="@style/GeneralDimens">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ViewAnimator
+        android:id="@+id/viewAnimator"
+        style="@style/View">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout style="@style/Layout">
+
+            <ImageView
+                style="@style/Image"
+                android:src="@drawable/canadian" />
+
+            <TextView
+                android:text="@string/intro"
+                style="@style/TextView" />
+
+            <TextView
+                android:text="@string/intro_2"
+                style="@style/TextView" />
+
+            <EditText
+                android:id="@+id/name_field"
+                android:layout_margin="@dimen/editTextMargin"
+                android:hint="@string/name_placeholder"
+                android:inputType="textCapWords"
+                style="@style/View" />
+
+            <Button
+                android:onClick="isNameProvided"
+                android:text="@string/start_quiz_button"
+                style="@style/Button" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <TextView
+                android:text="@string/question_one"
+                style="@style/TextView2" />
+
+            <RadioGroup
+                android:id="@+id/qOneRadioGroup"
+                android:checkedButton="1"
+                style="@style/Layout">
+
+                <RadioButton
+                    android:id="@+id/q1a"
+                    android:text="@string/q1a"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q1b"
+                    android:text="@string/q1b"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q1c"
+                    android:text="@string/q1c"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q1d"
+                    android:text="@string/q1d"
+                    style="@style/RadioButton" />
+            </RadioGroup>
+
+            <Button
+                android:onClick="goNext"
+                android:text="@string/next_question"
+                style="@style/ButtonNext" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <TextView
+                android:text="@string/question_two"
+                style="@style/TextView2" />
+
+            <RadioGroup
+                android:id="@+id/qTwoRadioGroup"
+                android:checkedButton="1"
+                style="@style/Layout">
+
+                <RadioButton
+                    android:id="@+id/q2a"
+                    android:text="@string/q2a"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q2b"
+                    android:text="@string/q2b"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q2c"
+                    android:text="@string/q2c"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q2d"
+                    android:text="@string/q2d"
+                    style="@style/RadioButton" />
+            </RadioGroup>
+
+            <RelativeLayout style="@style/RelativeLayout">
+
+                <Button
+                    android:onClick="goBack"
+                    android:text="@string/previous_question"
+                    style="@style/ButtonBack" />
+
+                <Button
+                    android:onClick="goNext"
+                    android:text="@string/next_question"
+                    style="@style/ButtonNext2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <ImageView
+                android:src="@drawable/svindal"
+                style="@style/Image2" />
+
+            <TextView
+                android:text="@string/question_three"
+                style="@style/TextView2" />
+
+            <RadioGroup
+                android:id="@+id/qThreeRadioGroup"
+                android:checkedButton="1"
+                style="@style/Layout">
+
+                <RadioButton
+                    android:id="@+id/q3a"
+                    android:text="@string/q3a"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q3b"
+                    android:text="@string/q3b"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q3c"
+                    android:text="@string/q3c"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q3d"
+                    android:text="@string/q3d"
+                    style="@style/RadioButton" />
+            </RadioGroup>
+
+            <RelativeLayout style="@style/RelativeLayout">
+
+                <Button
+                    android:onClick="goBack"
+                    android:text="@string/previous_question"
+                    style="@style/ButtonBack" />
+
+                <Button
+                    android:onClick="goNext"
+                    android:text="@string/next_question"
+                    style="@style/ButtonNext2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <ImageView
+                android:src="@drawable/vonn"
+                style="@style/Image3" />
+
+            <TextView
+                android:text="@string/question_four"
+                style="@style/TextView2" />
+
+            <LinearLayout
+                android:id="@+id/checkBoxesContainer"
+                android:padding="16dp"
+                style="@style/Layout">
+
+                <CheckBox
+                    android:id="@+id/overallTitles"
+                    android:paddingLeft="@dimen/paddingLeft"
+                    android:text="@string/q4a"
+                    style="@style/RadioButton" />
+
+                <CheckBox
+                    android:id="@+id/goldOlympic"
+                    android:paddingLeft="@dimen/paddingLeft"
+                    android:text="@string/q4b"
+                    style="@style/RadioButton" />
+
+                <CheckBox
+                    android:id="@+id/goldWC"
+                    android:paddingLeft="@dimen/paddingLeft"
+                    android:text="@string/q4c"
+                    style="@style/RadioButton" />
+
+                <CheckBox
+                    android:id="@+id/silverOlympic"
+                    android:paddingLeft="@dimen/paddingLeft"
+                    android:text="@string/q4d"
+                    style="@style/RadioButton" />
+
+            </LinearLayout>
+
+            <RelativeLayout style="@style/RelativeLayout">
+
+                <Button
+                    android:onClick="goBack"
+                    android:text="@string/previous_question"
+                    style="@style/ButtonBack" />
+
+                <Button
+                    android:onClick="goNext"
+                    android:text="@string/next_question"
+                    style="@style/ButtonNext2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <TextView
+                android:text="@string/question_five"
+                style="@style/TextView2" />
+
+            <RadioGroup
+                android:id="@+id/qFiveRadioGroup"
+                android:checkedButton="1"
+                style="@style/Layout">
+
+                <RadioButton
+                    android:id="@+id/q5a"
+                    android:text="@string/q5a"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q5b"
+                    android:text="@string/q5b"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q5c"
+                    android:text="@string/q5c"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/q5d"
+                    android:text="@string/q5d"
+                    style="@style/RadioButton" />
+            </RadioGroup>
+
+            <RelativeLayout style="@style/RelativeLayout">
+
+                <Button
+                    android:onClick="goBack"
+                    android:text="@string/previous_question"
+                    style="@style/ButtonBack" />
+
+                <Button
+                    android:onClick="goNext"
+                    android:text="@string/next_question"
+                    style="@style/ButtonNext2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <TextView
+                android:text="@string/question_six"
+                style="@style/TextView2" />
+
+            <EditText
+                android:id="@+id/q6"
+                android:layout_margin="@dimen/editTextMargin"
+                android:hint="@string/q6"
+                android:inputType="textCapWords"
+                style="@style/View" />
+
+
+            <RelativeLayout style="@style/RelativeLayout">
+
+                <Button
+                    android:onClick="goBack"
+                    android:text="@string/previous_question"
+                    style="@style/ButtonBack" />
+
+                <Button
+                    android:onClick="goToSummary"
+                    android:text="@string/check_answers"
+                    style="@style/ButtonNext2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/Layout">
+
+            <TextView
+                android:id="@+id/summaryText"
+                android:text=""
+                style="@style/TextView2" />
+
+            <TextView
+                android:id="@+id/summaryText2"
+                android:text=""
+                style="@style/TextView2" />
+
+            <Button
+                android:onClick="startAgain"
+                android:text="@string/once_again_button"
+                style="@style/Button" />
+
+            <Button
+                android:onClick="shareTheScoreWithFriends"
+                android:text="@string/shareButton"
+                style="@style/Button" />
+
+        </LinearLayout>
+
+    </ViewAnimator>
+
+</ScrollView>

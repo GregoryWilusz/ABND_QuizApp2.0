@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingLeft">16dp</dimen>
+    <dimen name="paddingRight">16dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="marginLeft">16dp</dimen>
+    <dimen name="marginRight">16dp</dimen>
+    <dimen name="marginTop">40dp</dimen>
+    <dimen name="marginBottom">16dp</dimen>
+    <dimen name="textSize">18sp</dimen>
+    <dimen name="imageHeight">200dp</dimen>
+    <dimen name="editTextMargin">16dp</dimen>
+</resources>

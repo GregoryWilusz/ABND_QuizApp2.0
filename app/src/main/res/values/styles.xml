@@ -1,11 +1,112 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/imageHeight</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:contentDescription">@string/canadian</item>
+    </style>
+
+    <style name="GeneralDimens">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/fontColor</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/marginTop</item>
+    </style>
+
+    <style name="TextView2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/fontColor</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <style name="RadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/marginLeft</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <style name="ButtonNext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginRight">@dimen/marginRight</item>
+        <item name="android:layout_marginTop">@dimen/marginTop</item>
+    </style>
+
+    <style name="ButtonBack">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginLeft">@dimen/marginLeft</item>
+        <item name="android:layout_marginTop">@dimen/marginTop</item>
+    </style>
+
+    <style name="ButtonNext2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginRight">@dimen/marginRight</item>
+        <item name="android:layout_marginTop">@dimen/marginTop</item>
+    </style>
+
+    <style name="Image2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/imageHeight</item>
+        <item name="android:contentDescription">@string/svindal</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="Image3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/imageHeight</item>
+        <item name="android:contentDescription">@string/vonn</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="RelativeLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>

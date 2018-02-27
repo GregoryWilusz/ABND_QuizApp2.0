@@ -1,3 +1,58 @@
-<resources>
-    <string name="app_name">QuizApp</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--General and welcome screen strings-->
+    <string name="app_name">Downhill Quiz</string>
+    <string name="intro">Welcome! Do you want to find out some interesting facts about this extremely dangerous discipline?</string>
+    <string name="intro_2">Just enter your name and have a good fun.</string>
+    <string name="name_placeholder">Name</string>
+    <string name="start_quiz_button">Start quiz</string>
+    <string name="canadian">Canadian DH racer</string>
+    <string name="svindal">Aksel Lund Svindal</string>
+    <string name="vonn">Lindsey Vonn</string>
+
+    <!--Buttons and toasts strings-->
+    <string name="next_question">Next question</string>
+    <string name="previous_question">Back</string>
+    <string name="check_answers">Check the answers</string>
+    <string name="once_again_button">Once Again?</string>
+    <string name="toast_no_name">Please, provide a name to play the quiz.</string>
+
+    <!--Questions and summary strings-->
+    <string name="question_one">1/6. Who is the most successful all-time winner of World Cup Men’s Downhill races?</string>
+    <string name="q1a" translatable="false">Hermann Maier</string>
+    <string name="q1b" translatable="false">Franz Klammer</string>
+    <string name="q1c" translatable="false">Didier Cuche</string>
+    <string name="q1d" translatable="false">Aksel Lund Svindal</string>
+    <string name="question_two">2/6. In Wengen, Switzerland, the Lauberhorn downhill is the longest on the FIS World Cup tour with 4,415 meters. It is also the track with the fastest recorded speeds. What is the unofficial record set by Johan Clarey in January 2013?</string>
+    <string name="q2a" translatable="false">138.9 km/h</string>
+    <string name="q2b" translatable="false">145,2 km/h</string>
+    <string name="q2c" translatable="false">161.9 km/h</string>
+    <string name="q2d" translatable="false">155.7 km/h</string>
+    <string name="question_three">3/6. The Hahnenkamm race in Kitzbühel, Austria, is one of the most famous and dangerous downhills. It is one of the longest track with 60-metre jumps and 860-metre altitude drop. There is one more important factor - the gradient of:</string>
+    <string name="q3a" translatable="false">60%</string>
+    <string name="q3b" translatable="false">45%</string>
+    <string name="q3c" translatable="false">30%</string>
+    <string name="q3d" translatable="false">85%</string>
+    <string name="question_four">4/6. Lindsey Vonn, one of the greatest women’s skiers in the history, gained individually among the other things:</string>
+    <string name="q4a">4 overall titles</string>
+    <string name="q4b">1 gold Olympic medal</string>
+    <string name="q4c">2 gold WC medals</string>
+    <string name="q4d">2 silver Olympic medals</string>
+    <string name="question_five">5/6. The start of the men’s Corviglia downhill in St Moritz, called “Free fall”, is even steeper than the infamous Streif. The racers accelerate from 0 to 130 km/h in just:</string>
+    <string name="q5a">5 seconds</string>
+    <string name="q5b">7 seconds</string>
+    <string name="q5c">10 seconds</string>
+    <string name="q5d">14 seconds</string>
+    <string name="question_six">6/6. The first recorded downhill skiing race in Europe took place in 1879 in the country of:</string>
+    <string name="q6">Enter the name of the country</string>
+    <string name="summary"><xliff:g id="enteredName" example="Greg">%s</xliff:g>: you answered <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g>/6 questions correctly.</string>
+    <string name="summary2a">Try to get a better result, you can do it!</string>
+    <string name="summary2b">Nice try! It still could be better. Next turn?</string>
+    <string name="summary2c">Excellent performance. Congratulations!</string>
+
+    <string name="shareButton">Share your score with friends</string>
+    <string name="emailContent"><xliff:g id="enteredName" example="Greg">%s</xliff:g> answered <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g>/6 questions correctly.</string>
+    <string name="emailSubject">Your friend <xliff:g id="enteredName" example="Greg">%s</xliff:g> wants you to check his score in DownhillQuiz App.</string>
 </resources>
+
+
