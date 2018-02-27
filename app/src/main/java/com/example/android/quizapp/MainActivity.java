@@ -16,22 +16,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    EditText enteredName, countryFirst;
-    ViewAnimator viewAnimator;
-    Animation animationIn, animationOut;
-    int correctAnswersCounter;
+    @BindView(R.id.viewAnimator) ViewAnimator viewAnimator;
+    @BindView(R.id.name_field) EditText enteredName;
+    @BindView(R.id.q6) EditText countryFirst;
+    private int correctAnswersCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-        viewAnimator = findViewById(R.id.viewAnimator);
+//        viewAnimator = findViewById(R.id.viewAnimator);
 
-        animationIn = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left);
-        animationOut = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_out_right);
+        Animation animationIn = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left);
+        Animation animationOut = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_out_right);
 
         viewAnimator.setInAnimation(animationIn);
         viewAnimator.setOutAnimation(animationOut);
@@ -58,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
      * This method checks if the name is provided.
      */
     public void isNameProvided(View view) {
-        enteredName = (EditText) findViewById(R.id.name_field);
         if (enteredName.getText().toString().equals("")) {
             Toast.makeText(this, getString(R.string.toast_no_name), Toast.LENGTH_SHORT).show();
             return;
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is responsible for taking user to summary screen and creating it.
      */
     public void goToSummary(View view) {
-        countryFirst = (EditText) findViewById(R.id.q6);
+//        countryFirst = (EditText) findViewById(R.id.q6);
         checkTheAnswers();
         showSummarizeToast(enteredName.getText().toString());
         viewAnimator.showNext();
