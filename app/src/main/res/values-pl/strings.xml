@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Downhill Quiz</string>
+    <string name="intro">Witaj! Chcesz dowiedzieć się czegoś interesującego o tej ekstremalnie niebezpieczniej dyscyplinie narciarskiej?</string>
+    <string name="intro_2">Wpisz tylko swoje imię i baw się dobrze.</string>
+    <string name="name_placeholder">Imię</string>
+    <string name="start_quiz_button">Rozpocznij quiz</string>
+    <string name="next_question">Następne pytanie</string>
+    <string name="previous_question">Wróć do poprzedniego</string>
+    <string name="check_answers">Sprawdź odpowiedzi</string>
+    <string name="once_again_button">Jeszcze raz?</string>
+    <string name="toast_no_name">Proszę, wprowadź swoje imię, aby rozpocząć quiz</string>
+    <string name="question_one">1/6. Kto jest najbardziej utytułowanym zwycięzcą zawodów Pucharu Świata w zjeździe mężczyzn?</string>
+    <string name="question_six">6/6. Pierwsze udokumentowane w Europie zawody w zjeździe miały miejsce w 1879 roku w:</string>
+    <string name="question_five">5/6. Początek zjazdu mężczn w St Moritz, zwany \"Free fall\", jest nawet bardziej stromy od osławionego Streifa. Zawodnicy rozpędzają się od 0 do 130 km/h w zaledwie:</string>
+    <string name="question_four">4/6. Lindsey Vonn, jedna z największych narciarek alpejskich w historii, zdobyła indywidualnie między innymi:</string>
+    <string name="question_three">"3/6. Wyścig Hahnenkamm w Kitzbühel (Austria) jest jednym z najsławniejszych i najniebezpieczniejszych zjazdów. To jedna z najdłuższych tras z 60-metrowymi skokami i spadkiem wysokości wynoszącym 860 metrów. Jest jeszcze jeden ważny czynnik - stopień nachylenia równy:"</string>
+    <string name="q5a">5 sekund</string>
+    <string name="q5b">7 sekund</string>
+    <string name="q5c">10 sekund</string>
+    <string name="q5d">14 sekund</string>
+    <string name="q6">Wpisz nazwę kraju</string>
+    <string name="q4d">2 srebrne medale olimpijskie</string>
+    <string name="q4c">2 złote medale Mistrzostw Świata</string>
+    <string name="q4b">1 złoty medal olimpijski</string>
+    <string name="q4a">4 wygrane Puchary Świata</string>
+    <string name="question_two">2/6. W wengen (Szwajcaria), zjazd Lauberhorn o długości 4415 metrów należy do najdłuższych w całym cyklu Pucharu Świata. To także trasa z największymi odnotowanymi prędkościami. Jaki jest nieoficjalny rekord prędkości ustanowiony przez Johana Clarey w styczniu 2013 roku?</string>
+    <string name="summary"><xliff:g id="enteredName" example="Greg">%s</xliff:g>: odpowiedziałeś poprawnie na <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g> z 6 pytań.</string>
+    <string name="summary2a">Spróbuj uzyskać lepszy wynik, stać Cię na to!</string>
+    <string name="summary2b">Niezła próba! Wciąż mogłoby być lepiej. Kolejna tura?</string>
+    <string name="summary2c">Świetny występ. Gratulacje!</string>
+    <string name="emailContent"><xliff:g id="enteredName" example="Greg">%s</xliff:g> odpowiedział poprawnie na <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g> z 6 pytań.</string>
+    <string name="emailSubject">Twój przyjaciel <xliff:g id="enteredName" example="Greg">%s</xliff:g> chce abyś sprawdził, ile punktów zdobył w aplikacji DownhillQuiz.</string>
+    <string name="shareButton">Podziel się ze znajomymi</string>
+</resources>

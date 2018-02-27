@@ -18,6 +18,7 @@ import android.widget.ViewAnimator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,25 +56,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method invokes an common email intent and creates an email's subject and content
-     *
-     */
-    public void shareTheScoreWithFriends(View view) {
-        String emailContent = getString(R.string.emailContent, enteredName.getText().toString(), correctAnswersCounter);
-        String emailSubject = getString(R.string.emailSubject, enteredName.getText().toString());
-
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
-        intent.putExtra(Intent.EXTRA_TEXT, emailContent);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
-    }
-
-    /**
      * This method checks if the name is provided.
      */
+    @OnClick(R.id.start_quiz_btn)
     public void isNameProvided(View view) {
         if (enteredName.getText().toString().equals("")) {
             Toast.makeText(this, getString(R.string.toast_no_name), Toast.LENGTH_SHORT).show();
@@ -84,8 +69,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is responsible for taking user to summary screen and creating it.
+     * This method change the view to the next one.
      */
+    @OnClick({ R.id.to_q2_btn, R.id.to_q3_btn, R.id.to_q4_btn, R.id.to_q5_btn, R.id.to_q6_btn })
+    public void goNext(View view) {
+        viewAnimator.showNext();
+    }
+
+    /**
+     * This method change the view to the previous one.
+     */
+    @OnClick({ R.id.back_to_q1_btn, R.id.back_to_q2_btn, R.id.back_to_q3_btn, R.id.back_to_q4_btn, R.id.back_to_q5_btn })
+    public void goBack(View view) {
+        viewAnimator.showPrevious();
+    }
+
+    /**
+     * This method is responsible for taking user to summary screen and handle the checking test logic.
+     */
+    @OnClick(R.id.to_summary_btn)
     public void goToSummary(View view) {
         checkTheAnswers();
         showSummarizeToast(enteredName.getText().toString());
@@ -100,27 +102,6 @@ public class MainActivity extends AppCompatActivity {
             summaryText2.setText(getString(R.string.summary2c));
         }
 
-    }
-
-    /**
-     * This method shows Toast message with the right answers score.
-     */
-    public void showSummarizeToast(String enteredName) {
-        Toast.makeText(this, getString(R.string.summary, enteredName, correctAnswersCounter), Toast.LENGTH_LONG).show();
-    }
-
-    /**
-     * This method change the view to the next one.
-     */
-    public void goNext(View view) {
-        viewAnimator.showNext();
-    }
-
-    /**
-     * This method change the view to the previous one.
-     */
-    public void goBack(View view) {
-        viewAnimator.showPrevious();
     }
 
     /**
@@ -158,6 +139,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method shows Toast message with the right vs. all answers score.
+     */
+    public void showSummarizeToast(String enteredName) {
+        Toast.makeText(this, getString(R.string.summary, enteredName, correctAnswersCounter), Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * This method sets default view and invoke clearing data method.
+     */
+    @OnClick(R.id.again_btn)
+    public void startAgain(View view) {
+        clearData();
+        viewAnimator.setDisplayedChild(0);
+    }
+
+    /**
      * This method clears all data provided in previous turn.
      */
     public void clearData() {
@@ -177,11 +174,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method sets default view and invoke clearing data method.
+     * This method invokes a common email intent and creates an email's subject and content
+     *
      */
-    public void startAgain(View view) {
-        clearData();
-        viewAnimator.setDisplayedChild(0);
+    @OnClick(R.id.share_score_btn)
+    public void shareTheScoreWithFriends(View view) {
+        String emailContent = getString(R.string.emailContent, enteredName.getText().toString(), correctAnswersCounter);
+        String emailSubject = getString(R.string.emailSubject, enteredName.getText().toString());
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
+        intent.putExtra(Intent.EXTRA_TEXT, emailContent);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
 }

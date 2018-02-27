@@ -30,7 +30,7 @@
                 style="@style/View" />
 
             <Button
-                android:onClick="isNameProvided"
+                android:id="@+id/start_quiz_btn"
                 android:text="@string/start_quiz_button"
                 style="@style/Button" />
 
@@ -69,7 +69,7 @@
             </RadioGroup>
 
             <Button
-                android:onClick="goNext"
+                android:id="@+id/to_q2_btn"
                 android:text="@string/next_question"
                 style="@style/ButtonNext" />
 
@@ -110,12 +110,12 @@
             <RelativeLayout style="@style/RelativeLayout">
 
                 <Button
-                    android:onClick="goBack"
+                    android:id="@+id/back_to_q1_btn"
                     android:text="@string/previous_question"
                     style="@style/ButtonBack" />
 
                 <Button
-                    android:onClick="goNext"
+                    android:id="@+id/to_q3_btn"
                     android:text="@string/next_question"
                     style="@style/ButtonNext2" />
 
@@ -162,12 +162,12 @@
             <RelativeLayout style="@style/RelativeLayout">
 
                 <Button
-                    android:onClick="goBack"
+                    android:id="@+id/back_to_q2_btn"
                     android:text="@string/previous_question"
                     style="@style/ButtonBack" />
 
                 <Button
-                    android:onClick="goNext"
+                    android:id="@+id/to_q4_btn"
                     android:text="@string/next_question"
                     style="@style/ButtonNext2" />
 
@@ -219,12 +219,12 @@
             <RelativeLayout style="@style/RelativeLayout">
 
                 <Button
-                    android:onClick="goBack"
+                    android:id="@+id/back_to_q3_btn"
                     android:text="@string/previous_question"
                     style="@style/ButtonBack" />
 
                 <Button
-                    android:onClick="goNext"
+                    android:id="@+id/to_q5_btn"
                     android:text="@string/next_question"
                     style="@style/ButtonNext2" />
 
@@ -267,12 +267,12 @@
             <RelativeLayout style="@style/RelativeLayout">
 
                 <Button
-                    android:onClick="goBack"
+                    android:id="@+id/back_to_q4_btn"
                     android:text="@string/previous_question"
                     style="@style/ButtonBack" />
 
                 <Button
-                    android:onClick="goNext"
+                    android:id="@+id/to_q6_btn"
                     android:text="@string/next_question"
                     style="@style/ButtonNext2" />
 
@@ -297,12 +297,12 @@
             <RelativeLayout style="@style/RelativeLayout">
 
                 <Button
-                    android:onClick="goBack"
+                    android:id="@+id/back_to_q5_btn"
                     android:text="@string/previous_question"
                     style="@style/ButtonBack" />
 
                 <Button
-                    android:onClick="goToSummary"
+                    android:id="@+id/to_summary_btn"
                     android:text="@string/check_answers"
                     style="@style/ButtonNext2" />
 
@@ -323,12 +323,12 @@
                 style="@style/TextView2" />
 
             <Button
-                android:onClick="startAgain"
+                android:id="@+id/again_btn"
                 android:text="@string/once_again_button"
                 style="@style/Button" />
 
             <Button
-                android:onClick="shareTheScoreWithFriends"
+                android:id="@+id/share_score_btn"
                 android:text="@string/shareButton"
                 style="@style/Button" />
 
