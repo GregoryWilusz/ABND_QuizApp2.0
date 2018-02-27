@@ -24,6 +24,21 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.viewAnimator) ViewAnimator viewAnimator;
     @BindView(R.id.name_field) EditText enteredName;
     @BindView(R.id.q6) EditText countryFirst;
+    @BindView(R.id.summaryText) TextView summaryText;
+    @BindView(R.id.summaryText2) TextView summaryText2;
+    @BindView(R.id.overallTitles) CheckBox overallTitles;
+    @BindView(R.id.goldOlympic) CheckBox goldOlympic;
+    @BindView(R.id.goldWC) CheckBox goldWC;
+    @BindView(R.id.qOneRadioGroup) RadioGroup radioGroupQ1;
+    @BindView(R.id.qTwoRadioGroup) RadioGroup radioGroupQ2;
+    @BindView(R.id.qThreeRadioGroup) RadioGroup radioGroupQ3;
+    @BindView(R.id.qFiveRadioGroup) RadioGroup radioGroupQ5;
+    @BindView(R.id.q1b) RadioButton allTimeDHWinner;
+    @BindView(R.id.q2c) RadioButton maxSpeedRecorded;
+    @BindView(R.id.q3d) RadioButton theGradient;
+    @BindView(R.id.q5b) RadioButton accelerateTime;
+    @BindView(R.id.checkBoxesContainer) LinearLayout checkBoxesContainer;
+
     private int correctAnswersCounter;
 
     @Override
@@ -31,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-//        viewAnimator = findViewById(R.id.viewAnimator);
 
         Animation animationIn = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_in_left);
         Animation animationOut = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_out_right);
@@ -74,13 +87,10 @@ public class MainActivity extends AppCompatActivity {
      * This method is responsible for taking user to summary screen and creating it.
      */
     public void goToSummary(View view) {
-//        countryFirst = (EditText) findViewById(R.id.q6);
         checkTheAnswers();
         showSummarizeToast(enteredName.getText().toString());
         viewAnimator.showNext();
 
-        TextView summaryText = (TextView) findViewById(R.id.summaryText);
-        TextView summaryText2 = (TextView) findViewById(R.id.summaryText2);
         summaryText.setText(getString(R.string.summary, enteredName.getText().toString(), correctAnswersCounter));
         if (correctAnswersCounter < 3) {
             summaryText2.setText(getString(R.string.summary2a));
@@ -119,29 +129,22 @@ public class MainActivity extends AppCompatActivity {
     public int checkTheAnswers() {
         correctAnswersCounter = 0;
 
-        RadioButton allTimeDHWinner = findViewById(R.id.q1b);
         if (allTimeDHWinner.isChecked()) {
             correctAnswersCounter++;
         }
 
-        RadioButton maxSpeedRecorded = findViewById(R.id.q2c);
         if (maxSpeedRecorded.isChecked()) {
             correctAnswersCounter++;
         }
 
-        RadioButton theGradient = findViewById(R.id.q3d);
         if (theGradient.isChecked()) {
             correctAnswersCounter++;
         }
 
-        CheckBox overallTitles = (CheckBox) findViewById(R.id.overallTitles);
-        CheckBox goldOlympic = (CheckBox) findViewById(R.id.goldOlympic);
-        CheckBox goldWC = (CheckBox) findViewById(R.id.goldWC);
         if (overallTitles.isChecked() && goldOlympic.isChecked() && goldWC.isChecked()) {
             correctAnswersCounter++;
         }
 
-        RadioButton accelerateTime = findViewById(R.id.q5b);
         if (accelerateTime.isChecked()) {
             correctAnswersCounter++;
         }
@@ -160,16 +163,11 @@ public class MainActivity extends AppCompatActivity {
     public void clearData() {
         enteredName.setText("");
         countryFirst.setText("");
-        RadioGroup radioGroupQ1 = (RadioGroup) findViewById(R.id.qOneRadioGroup);
-        RadioGroup radioGroupQ2 = (RadioGroup) findViewById(R.id.qTwoRadioGroup);
-        RadioGroup radioGroupQ3 = (RadioGroup) findViewById(R.id.qThreeRadioGroup);
-        RadioGroup radioGroupQ5 = (RadioGroup) findViewById(R.id.qFiveRadioGroup);
         radioGroupQ1.clearCheck();
         radioGroupQ2.clearCheck();
         radioGroupQ3.clearCheck();
         radioGroupQ5.clearCheck();
 
-        LinearLayout checkBoxesContainer = (LinearLayout) findViewById(R.id.checkBoxesContainer);
         for (int i = 0; i < checkBoxesContainer.getChildCount(); i++) {
             View checkBoxesContainerChild = checkBoxesContainer.getChildAt(i);
             if (checkBoxesContainerChild instanceof CheckBox) {
