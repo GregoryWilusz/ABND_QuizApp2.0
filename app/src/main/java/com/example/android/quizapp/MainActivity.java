@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.overallTitles) CheckBox overallTitles;
     @BindView(R.id.goldOlympic) CheckBox goldOlympic;
     @BindView(R.id.goldWC) CheckBox goldWC;
+    @BindView(R.id.silverOlympic) CheckBox silverOlympic;
     @BindView(R.id.qOneRadioGroup) RadioGroup radioGroupQ1;
     @BindView(R.id.qTwoRadioGroup) RadioGroup radioGroupQ2;
     @BindView(R.id.qThreeRadioGroup) RadioGroup radioGroupQ3;
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             correctAnswersCounter++;
         }
 
-        if (overallTitles.isChecked() && goldOlympic.isChecked() && goldWC.isChecked()) {
+        if (overallTitles.isChecked() && goldOlympic.isChecked() && goldWC.isChecked() && !silverOlympic.isChecked()) {
             correctAnswersCounter++;
         }
 
@@ -130,8 +131,8 @@ public class MainActivity extends AppCompatActivity {
             correctAnswersCounter++;
         }
 
-        if (countryFirst.getText().toString().toLowerCase().equals("sweden")
-                || countryFirst.getText().toString().toLowerCase().equals("szwecja") ) {
+        if (countryFirst.getText().toString().equalsIgnoreCase("sweden")
+                || countryFirst.getText().toString().equalsIgnoreCase("szwecja")) {
             correctAnswersCounter++;
         }
 
